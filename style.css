@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* utility classes start */
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-top{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* utility classes end */
+
+header{
+    background-color: cornflowerblue;
+    color: white;
+    width: 100%;
+    min-height: 100px;
+}
+
+.header-col{
+    width: 50%;
+}
+
+#dojoWeather{
+    margin-left: 5%;
+}
+
+#body-header{
+    margin-bottom: 3%;
+/*     border-bottom: 2px solid black;
+ */}
+
+#show-temp{
+    gap: 1rem;
+}
+
+#body{
+    /* outline: 2px dashed red; */
+    width: 90%;
+    margin: 5%;
+    min-height: 200px;
+}
+
+#body-content{
+/*     background-color: yellow; */
+    height: 400px;
+    width: 100%;
+    gap: 1%;
+    margin-bottom: 1%;
+}
+
+.weather-icon{
+    width: 70%;
+    border-radius: 50%;
+}
+
+.content-column{
+    background-color: lightgray;
+    width: 25%;
+    height: 100%;
+    padding: 2% 0 2% 0;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* .content-column > span{
+    gap: 5rem;
+} */
+
+.color-temps{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-temp{
+    color: red;
+}
+
+.left-temp{
+    color: blue;
+}
+
+#body-footer{
+    background-color: lightgray;
+    border: 2px solid black;
+    height: 100px;
+    width: 100%;
+    gap: 1%;
+}
+
+#cookie-icon{
+/*     background-color: lightblue;
+ */    height: 100%;
+        width: 15%
+}
+
+#cookie-text{
+/*     background-color: purple; */    
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+} 
+
+#cookie-accept{
+/*     background-color: red;
+ */    height: 100%;
+        width: 35%;
+}
+
+#accept-button{
+    background-color: cornflowerblue;
+    font-size: larger;
+    border: 1px solid black;
+    box-shadow: 5px 3px 3px;
+    padding: 1% 6%;
+}
+
+btn:hover{
+    background-color: fuchsia;
+    cursor: pointer;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="flex-center">
+        <div id="dojoWeather" class="header-col">
+            <h1>DojoWeather</h1>
+        </div>
+        <div id="cities" class="header-col flex">
+            <h3 onclick="alert('Loading weather report')">Burbank</h3>
+            <h3 onclick="alert('Loading weather report')">Chicago</h3>
+            <h3 onclick="alert('Loading weather report')">Dallas</h3>
+        </div>
+    </header>
+    <div id="body">
+        <div id="body-header" class="flex-center">
+            <div id="body-title" class="title-row">
+                <h1>San Jose</h1>
+            </div>
+            <div id="show-temp" class="title-row flex">
+                <p>show temperature in</p>
+                <label for=""></label>
+                <select name="" id="tempChangePicker" onchange="changeTemp(this)">
+                    <option value="celsius">C˚</option>
+                    <option value="fahrenheit">F˚</option>
+                </select>
+            </div>
+        </div>
+        <div id="body-content" class="flex-top">
+            <div class="content-column">
+                <h2>Today</h2>
+                <img src="./some_rain.png" alt="raincloud" class="weather-icon">
+                <p>some rain</p>
+                <div class="color-temps">
+                    <p class="right-temp change-temp"><span class="temp-num">24</span>°</p>
+                    <p class="left-temp change-temp" class="temp-num"><span>18</span>°</p>
+                </div>
+                <!-- <h2></h2>
+                <img src="./some_rain.png" alt="raincloud">
+                <p>some rain</p> -->
+            </div>
+            <div class="content-column">
+                <h2>Tomorrow</h2>
+                <img src="./some_sun.png" alt="sun" class="weather-icon">
+                <p>some sun</p>                
+                <div class="color-temps">
+                    <div class="color-temps">
+                        <p class="right-temp change-temp"><span class="temp-num">27</span>°</p>
+                        <p class="left-temp change-temp" class="temp-num"><span>18</span>°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-column">
+                <h2>Friday</h2>
+                <img src="./some_rain.png" alt="rain" class="weather-icon">
+                <p>some rain</p>
+                <div class="color-temps">
+                    <div class="color-temps">
+                        <p class="right-temp change-temp"><span class="temp-num">21</span>°</p>
+                        <p class="left-temp change-temp" class="temp-num"><span>16</span>°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-column">
+                <h2>Saturday</h2>
+                <img src="./some_clouds.png" alt="clouds" class="weather-icon">
+                <p>some clouds</p>
+                <div class="color-temps">
+                    <div class="color-temps">
+                        <p class="right-temp change-temp"><span class="temp-num">26</span>°</p>
+                        <p class="left-temp change-temp" class="temp-num"><span>21</span>°</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="body-footer" class="flex">
+            <div id="cookie-icon" class="footer-column flex">
+                    <img src="./cookie.png" alt="cookie-icon">
+            </div>
+            <div id="cookie-text" class="footer-column">
+                <h4><strong>Stop! Cookie Time</strong></h4>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="">Read more...</a></p>
+            </div>
+            <div id="cookie-accept" class="footer-column flex">
+                <button id="accept-button" onclick="accept('#body-footer')">I accept</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
