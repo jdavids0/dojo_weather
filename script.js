@@ -3,39 +3,41 @@ function accept(id){
     element.remove();
 }
 
-function changeTemp(){
-    var temps = document.getElementsByClassName('.temp-num');
-    var value = document.getElementById('tempChangePicker').value;
+function changeTemp(element){
+    var temps = document.getElementsByClassName('temp-num');
+    var value = element.value;
+    console.log(value);
+    if (value == 'fahrenheit'){
+        for(i=0; i<temps.length; i++){
+            temps[i].innerText = Math.round(temps[i].innerText*1.8+32);
+        }
+    }
+    else {
+        for(i=0; i<temps.length; i++){
+            temps[i].innerText=Math.round((temps[i].innerText-32)/1.8);
+        }
+    }
+}
 
-    for(var i=0; i<temps.length; i++){
-        if (value == "fahrenheit"){
-            temps[i].innerText = Math.round((temp[i].innerText*1.8)+32);
-        
+/* function changeTemp(element){
+    var temps = document.getElementsByClassName('temp-num');
+    console.log(temps)
+    var value = element.value;
+    /* var value = document.getElementById('tempChangePicker').value; */
+    /* console.log(value)
+    for(i=0; i<temps.length; i++){ */
+        /* console.log(i) */
+        /* if (value == 'fahrenheit'){
+            console.log("entered fahrenheit")
+            console.log(temps.innerHTML)
+            temps[i].innerText = Math.round(temp[i].innerText*1.8+32);
+            console.log(temps.innerText)
+            console.log(temps[i]);
         }
         else {
-            temps[i].innerText = Math.round(temp[i].innerText-32/1.8)
+            temps[i].innerText = Math.round((temp[i].innerText-32)/1.8)
+            console.log ("entered celsius")
         }
-        }
-    console.log(temps[i].innerText);
-    }
-
-/* function c2f(temp) {
-        return Math.round(9 / 5 * temp + 32);
-    }
-    
-function f2c(temp) {
-        return Math.round(5 / 9 * (temp - 32));
-    }
-    
-    function convert(element) {
-        console.log(element.value);
-        for(var i=1; i<9; i++) {
-            var tempSpan = document.querySelector("#temp" + i);
-            var tempVal = parseInt(tempSpan.innerText);
-            if(element.value == "°C") {
-                tempSpan.innerText = f2c(tempVal);
-            } else {
-                tempSpan.innerText = c2f(tempVal);
-            }
-        }
-    } */
+        } */
+/*     console.log(temps[i].innerText);
+ */ /*    }  */

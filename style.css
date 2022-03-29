@@ -78,11 +78,13 @@ header{
     width: 25%;
     height: 100%;
     padding: 2% 0 2% 0;
+    border-radius: 2%;
     /* text-align: center; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    overflow: hidden;
 }
 
 /* .content-column > span{
